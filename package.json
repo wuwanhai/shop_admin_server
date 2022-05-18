@@ -11,13 +11,18 @@
   "author": "wanhai_wu",
   "license": "ISC",
   "dependencies": {
+    "@koa/cors": "^3.3.0",
     "cross-env": "^7.0.3",
     "koa": "^2.13.4",
     "koa-body": "^5.0.0",
     "koa-json": "^2.0.2",
     "koa-logger": "^3.2.1",
     "koa-onerror": "^4.2.0",
-    "koa-router": "^10.1.1"
+    "koa-router": "^10.1.1",
+    "koa2-cors": "^2.0.6",
+    "mongoose": "^6.3.3",
+    "mongoose-paginate": "^5.0.3",
+    "mongoose-unique-validator": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^8.15.0",

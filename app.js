@@ -1,6 +1,7 @@
 const Koa = require('koa');
 
 const path = require('path');
+const cors = require('@koa/cors');
 
 const app = new Koa();
 const onerror = require('koa-onerror');
@@ -12,6 +13,7 @@ const responseFormatter = require('./middleware/response_formatter');
 const { apiPrefix } = require('./config/index');
 const routers = require('./routers/index');
 
+require('./dbhelper/db');
 // koa的错误处理程序hack
 onerror(app);
 
@@ -32,6 +34,7 @@ app.use(koaBody({
 }));
 app.use(json());
 app.use(logger());
+app.use(cors())
 
 // response formatter
 app.use(responseFormatter(apiPrefix));

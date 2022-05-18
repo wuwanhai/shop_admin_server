@@ -13,7 +13,9 @@ const responseFormatter = (apiPrefix) => async (ctx, next) => {
         ctx.body = {
           code: 'success',
           message: '成功!',
-          result: ctx.body,
+          data:{
+              data: ctx.body
+          },
         };
       }
     } catch (error) {
