@@ -11,11 +11,10 @@ const responseFormatter = (apiPrefix) => async (ctx, next) => {
         throw new ApiError(ApiErrorNames.NOT_FOUND);
       } else {
         ctx.body = {
-          code: 'success',
-          message: '成功!',
-          data:{
-              data: ctx.body
-          },
+          code: 200,
+          status: 'success',
+          msg: '成功!',
+          data: ctx.body || {},
         };
       }
     } catch (error) {
